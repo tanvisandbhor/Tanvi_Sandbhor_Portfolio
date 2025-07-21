@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gradient animation keyframes */
+@keyframes gradientMove {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Custom classes */
+.bg-animated {
+  background: linear-gradient(-45deg, #1e3a8a, #9333ea, #14b8a6, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientMove 5s ease infinite;
+}
+
+.bg-scroll-img {
+  background-image: url('/bg-dark.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
